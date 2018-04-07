@@ -1,0 +1,15 @@
+apply plugin: 'java'
+repositories {
+  jcenter()
+}
+dependencies {
+  compile "io.reactivex.rxjava2:rxjava:2.1.12"
+  compile 'com.alibaba:fastjson:1.2.46'
+
+  testCompile 'junit:junit:4.12'
+}
+test {
+  testLogging {
+    events "passed", "skipped", "failed", "standardOut", "standardError"
+  }
+}
